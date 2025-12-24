@@ -69,8 +69,4 @@ CREATE TABLE IF NOT EXISTS exam_attempt_question (
         ON DELETE CASCADE
 );
 
-select * from exam_attempt_question;
 
-select * from student;
-
-insert into student values(1,"Sethukumar", "Sethukumar@gmail.com");
