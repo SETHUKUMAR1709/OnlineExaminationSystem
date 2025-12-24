@@ -1,0 +1,763 @@
+{
+  "info": {
+    "_postman_id": "df02a326-97ec-4c10-91fa-ed30590dab65",
+    "name": "Online Examination System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Teachers",
+      "item": [
+        {
+          "name": "Create Teacher",
+          "id": "135e3aba-76e1-4a56-b3aa-32e1df8b7dc3",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Dr. Smith\",\r\n  \"email\": \"smith@university.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/teachers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "teachers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Teachers",
+          "id": "1a09fd19-8716-4265-9ce3-04a4b7c20d03",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/teachers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "teachers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Teacher by ID",
+          "id": "65da7580-2a3c-4d40-b586-c7d00e33922d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/teachers/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "teachers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Teacher",
+          "id": "478fe8fa-c8dd-4f80-838c-195c879575cb",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Dr. John Smith\",\r\n  \"email\": \"john.smith@university.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/teachers/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "teachers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Teacher",
+          "id": "996349d3-25a0-417a-83b4-dbf6c8bbc546",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/teachers/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "teachers",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "0eb0ed9d-70f3-480b-85fd-9427d4add51b"
+    },
+    {
+      "name": "Students",
+      "item": [
+        {
+          "name": "Create Student",
+          "id": "7dcb961c-f438-4ffc-a38a-fa163d98fdb8",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Alice\",\r\n  \"email\": \"alice@student.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/students",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Students",
+          "id": "0188adb3-b60d-4ef3-9dc5-d596927bc2c5",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/students",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "students"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Student by ID",
+          "id": "a719e71d-78a6-42a8-b4c4-83f4cfc4f467",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/students/3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "students",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Student",
+          "id": "2caaf94b-aaf1-49d8-8abd-34e272ec2fa8",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Alice Updated\",\r\n  \"email\": \"alice.updated@student.com\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/students/3",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "students",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Student",
+          "id": "c241cce9-12d8-4e6a-af2f-fb8e414412d6",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/students/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "students",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "7b159b62-330e-4442-840b-942777a5d340"
+    },
+    {
+      "name": "Exams",
+      "item": [
+        {
+          "name": "Create Exam",
+          "id": "3303746a-0922-4357-b8f2-ac4fb67b9682",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Data Structures Test\",\r\n  \"totalMarks\": 100,\r\n  \"teacher\": {\r\n    \"id\": 1\r\n  }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/exams",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get All Exams",
+          "id": "a672f4e6-8e70-4b1e-b0a2-de97e567a24d",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/exams",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Exam by ID",
+          "id": "9f1e0b70-aa24-451b-8443-f7ff10c99b47",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/exams/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exams by Teacher",
+          "id": "cc848ac6-994f-4f55-8f51-66260ef093e4",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/exams/teacher/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams",
+                "teacher",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exams with Average Score > X",
+          "id": "adc8693a-771c-4340-a17d-6230c7577c4e",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/exams/average/10",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams",
+                "average",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Exam",
+          "id": "b3e00b46-69d3-4f9f-b41a-3fb35fdc4a7d",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Advanced Data Structures Test\",\r\n  \"totalMarks\": 120\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/exams/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Exam",
+          "id": "96afa852-7aa0-4da3-813f-4fdc0f586e16",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/exams/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "exams",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "4be8c88f-512f-47d6-9040-689843b7ec39"
+    },
+    {
+      "name": "Questions",
+      "item": [
+        {
+          "name": "Create Question",
+          "id": "bc129c18-a9d6-4ae3-b902-8f9e11e7100b",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"text\": \"What is a Tree?\",\r\n  \"maxMarks\": 10,\r\n  \"exam\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "questions"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Questions by Exam",
+          "id": "203bab1c-e14b-4f9d-9021-57de92c82167",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/questions/exam/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "questions",
+                "exam",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Unanswered Questions",
+          "id": "14c3d513-d93f-49dc-8fd4-70f4a4e389b9",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/questions/unanswered/attempt/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "questions",
+                "unanswered",
+                "attempt",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update Question",
+          "id": "eb40be41-90a2-4475-8c56-7b2c275b9a4e",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"text\": \"Explain DFS\",\r\n  \"maxMarks\": 10\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/questions/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "questions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Question",
+          "id": "88bd785f-ef44-4fc7-a52a-43fd855936ea",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/questions/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "questions",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "243fc2fe-a6f5-41ec-a085-202404258436"
+    },
+    {
+      "name": "Exam Attempts",
+      "item": [
+        {
+          "name": "Create Exam Attempt",
+          "id": "ccd31e0b-26ed-4743-a91e-d1b46b296061",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"attemptDate\": \"2025-12-23T20:30:00\",\r\n  \"totalScore\": 0,\r\n  \"student\": {\r\n    \"id\": 1\r\n  },\r\n  \"exam\": {\r\n    \"id\": 2\r\n  }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/attempts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Attempts by Student",
+          "id": "a80c8868-3ef6-4bb4-a8dd-c607a07ba70b",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/attempts/student/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts",
+                "student",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Count Attempts by Exam",
+          "id": "698e8716-2471-4a82-9a90-0e2a1ccfe195",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/attempts/count/exam/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts",
+                "count",
+                "exam",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Highest Scoring Students",
+          "id": "06ef3f1f-0e09-41d3-b396-64549dee2483",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/attempts/topper/exam/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts",
+                "topper",
+                "exam",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Failed Students",
+          "id": "f046472f-6461-4444-93f6-85f8c16bb72f",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/attempts/failed/exam/2/40",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts",
+                "failed",
+                "exam",
+                "2",
+                "40"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Scores per Attempt",
+          "id": "1f6b1cff-7c26-4292-a041-efb71a975094",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/attempts/results/exam/2",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts",
+                "results",
+                "exam",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete Attempt",
+          "id": "f5758be2-45dd-471c-bf30-76b25e8f9aa2",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/attempts/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "attempts",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "2c70b8e5-6f2a-40e1-a944-b30c7659a4e8"
+    },
+    {
+      "name": "Answers (ExamAttemptQuestion)",
+      "item": [
+        {
+          "name": "Submit Answer",
+          "id": "e5237987-a7e9-4dd6-b10c-0388b1031854",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": {\r\n    \"attemptId\": 1,\r\n    \"questionId\": 3\r\n  },\r\n  \"answer\": \"Some answer\",\r\n  \"score\": 7,\r\n  \"attempt\": { \"id\": 1 },\r\n  \"question\": { \"id\": 3 }\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/answers",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "answers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Most Difficult Questions",
+          "id": "9d0ff057-fe3f-42f3-96ab-7586f6f89f24",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/answers/difficult",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "answers",
+                "difficult"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "id": "140b479e-cfc2-4ad3-b90c-8227193cefe5"
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "15f76a77-7199-45bc-a858-cd663fa25f91",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "97b3fd2c-387b-4951-afca-fd46b13b3a27",
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "id": "8bbac59a-6d1d-4056-8ad0-0385bc072950",
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
