@@ -1,0 +1,18 @@
+19. Online Examination System
+Entities & Relationships:
+Teacher → Exam (OneToMany)
+Exam → Question (OneToMany)
+ExamAttempt ↔ Question (ManyToMany via join with answer, score)
+Student → ExamAttempt (OneToMany)
+CRUD: for all entities
+10 Queries:
+Find exams created by a teacher
+Find questions in an exam
+Find attempts by a student
+Find scores per exam attempt
+Find highest scoring students per exam
+Find unanswered questions in attempts
+Count attempts per exam
+Find exams with average score > X
+Find students who failed an exam
+Find most difficult questions (lowest average score)
