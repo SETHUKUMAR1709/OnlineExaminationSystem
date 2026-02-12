@@ -6,12 +6,20 @@ import java.util.List;
 
 public interface ExamService {
     Exam createExam(Exam exam);
+
     Exam getExam(Long id);
+
     List<Exam> getAllExams();
+
     Exam updateExam(Long id, Exam exam);
+
     void deleteExam(Long id);
 
     List<Exam> getExamsByTeacher(Long teacherId);
-    List<Exam> getExamsWithAverageScoreGreaterThan(double score);
-}
 
+    List<Exam> getExamsWithAverageScoreGreaterThan(double score);
+
+    Exam publishExam(Long id);
+
+    List<Exam> getPublishedExams();
+}

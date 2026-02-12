@@ -17,25 +17,27 @@ public class ExamAttemptQuestionController {
         this.service = service;
     }
 
-    // Submit / update answer
     @PostMapping
     public ExamAttemptQuestion submit(@RequestBody ExamAttemptQuestion answer) {
         return service.submitAnswer(answer);
     }
 
-    // Scores per attempt
+    @PutMapping("/grade")
+    public ExamAttemptQuestion gradeAnswer(
+            @RequestParam Long attemptId,
+            @RequestParam Long questionId,
+            @RequestParam Integer score,
+            @RequestParam Long gradedById) {
+        return service.gradeAnswer(attemptId, questionId, score, gradedById);
+    }
+
     @GetMapping("/scores/{attemptId}")
-    public List<ScorePerQuestionDTO> scores(
-            @PathVariable Long attemptId
-    ) {
+    public List<ScorePerQuestionDTO> scores(@PathVariable Long attemptId) {
         return service.getScoresByAttempt(attemptId);
     }
 
-
-    // Most difficult questions
     @GetMapping("/difficult")
     public List<Object[]> difficultQuestions() {
         return service.getMostDifficultQuestions();
     }
 }
-

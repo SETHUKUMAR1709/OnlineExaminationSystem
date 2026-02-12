@@ -7,7 +7,10 @@ import java.util.List;
 
 public interface ExamAttemptQuestionService {
     ExamAttemptQuestion submitAnswer(ExamAttemptQuestion answer);
+
+    ExamAttemptQuestion gradeAnswer(Long attemptId, Long questionId, Integer score, Long gradedById);
+
     List<ScorePerQuestionDTO> getScoresByAttempt(Long attemptId);
+
     List<Object[]> getMostDifficultQuestions();
 }
-

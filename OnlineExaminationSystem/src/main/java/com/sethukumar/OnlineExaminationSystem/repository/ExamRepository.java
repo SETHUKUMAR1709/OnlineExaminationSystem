@@ -11,11 +11,13 @@ public interface ExamRepository extends JpaRepository<Exam, Long> {
 
     List<Exam> findByTeacherId(Long teacherId);
 
+    List<Exam> findByPublishedTrue();
+
     @Query("""
-        SELECT a.exam
-        FROM ExamAttempt a
-        GROUP BY a.exam
-        HAVING AVG(a.totalScore) > :score
-    """)
+                SELECT a.exam
+                FROM ExamAttempt a
+                GROUP BY a.exam
+                HAVING AVG(a.totalScore) > :score
+            """)
     List<Exam> findExamsWithAverageScoreGreaterThan(@Param("score") double score);
 }

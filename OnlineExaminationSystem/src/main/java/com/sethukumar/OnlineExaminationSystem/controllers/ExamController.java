@@ -41,16 +41,23 @@ public class ExamController {
         service.deleteExam(id);
     }
 
-    // 1️⃣ Exams by teacher
     @GetMapping("/teacher/{teacherId}")
     public List<Exam> byTeacher(@PathVariable Long teacherId) {
         return service.getExamsByTeacher(teacherId);
     }
 
-    // 8️⃣ Exams with avg score > X
     @GetMapping("/average/{score}")
     public List<Exam> examsAboveAverage(@PathVariable double score) {
         return service.getExamsWithAverageScoreGreaterThan(score);
     }
-}
 
+    @PutMapping("/{id}/publish")
+    public Exam publish(@PathVariable Long id) {
+        return service.publishExam(id);
+    }
+
+    @GetMapping("/published")
+    public List<Exam> published() {
+        return service.getPublishedExams();
+    }
+}

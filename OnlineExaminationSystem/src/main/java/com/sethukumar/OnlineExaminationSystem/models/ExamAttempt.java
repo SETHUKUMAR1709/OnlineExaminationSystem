@@ -11,13 +11,17 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 public class ExamAttempt {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private LocalDateTime attemptDate;
+
     private Integer totalScore;
+
+    private boolean graded;
 
     @ManyToOne
     @JoinColumn(name = "exam_id")
@@ -25,5 +29,5 @@ public class ExamAttempt {
 
     @ManyToOne
     @JoinColumn(name = "student_id")
-    private Student student;
+    private User student;
 }

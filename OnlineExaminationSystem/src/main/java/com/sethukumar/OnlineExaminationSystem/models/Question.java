@@ -11,14 +11,25 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 public class Question {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(columnDefinition = "TEXT", nullable = false)
     private String text;
+
     private Integer maxMarks;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private QuestionType type;
+
+    @Column(columnDefinition = "TEXT")
+    private String options;
+
+    private String correctAnswer;
 
     @ManyToOne
     @JoinColumn(name = "exam_id")
@@ -26,5 +37,5 @@ public class Question {
 
     @OneToMany(mappedBy = "question")
     @JsonIgnore
-    private List<ExamAttemptQuestion> attemptQuestionList;
+    private List<ExamAttemptQuestion> answers;
 }

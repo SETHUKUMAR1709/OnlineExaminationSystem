@@ -10,21 +10,15 @@ import java.util.List;
 public interface QuestionRepository extends JpaRepository<Question, Long> {
 
     List<Question> findByExamId(Long examId);
+
     @Query("""
-    SELECT q
-    FROM Question q
-    WHERE q.exam.id = (
-        SELECT a.exam.id
-        FROM ExamAttempt a
-        WHERE a.id = :attemptId
-    )
-    AND q.id NOT IN (
-        SELECT aq.question.id
-        FROM ExamAttemptQuestion aq
-        WHERE aq.attempt.id = :attemptId
-    )
-""")
+                SELECT q FROM Question q
+                WHERE q.exam.id = (
+                    SELECT a.exam.id FROM ExamAttempt a WHERE a.id = :attemptId
+                )
+                AND q.id NOT IN (
+                    SELECT aq.question.id FROM ExamAttemptQuestion aq WHERE aq.attempt.id = :attemptId
+                )
+            """)
     List<Question> findUnansweredQuestions(@Param("attemptId") Long attemptId);
-
-
 }

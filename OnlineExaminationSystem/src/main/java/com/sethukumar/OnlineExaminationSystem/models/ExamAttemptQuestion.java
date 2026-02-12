@@ -4,15 +4,19 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
+@Table(name = "answer")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 public class ExamAttemptQuestion {
+
     @EmbeddedId
     private ExamAttemptQuestionId id;
+
+    @Column(columnDefinition = "TEXT")
     private String answer;
+
     private Integer score;
 
     @ManyToOne
@@ -25,4 +29,7 @@ public class ExamAttemptQuestion {
     @JoinColumn(name = "question_id")
     private Question question;
 
+    @ManyToOne
+    @JoinColumn(name = "graded_by")
+    private User gradedBy;
 }
